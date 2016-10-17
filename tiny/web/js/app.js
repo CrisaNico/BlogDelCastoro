@@ -11,9 +11,9 @@ a.msg = function(m){
 a.load = function (p) {
 	//gestisce il caricamento dinamico dei frammenti html in #main.
 	a.pg = p //a.pg è una variabile che conterrà sempre il nome della pagina corrente
-	var activeClass='w3-white' //nome della classe da assegnare all'elemnto di navigazione attivo (la pagina corrente)
-	$('#nav a').parent('li').removeClass(activeClass) //rimuovo la classe che indica l'emento come attivo da tutti i collegamenti nella navbar 
-	$('#a-' + p).parent('li').addClass(activeClass) //attribuisco la classe che indica il collegamento come attivo al link che effettivamente lo è
+	var activeClass='w3-white'
+	$('nav a').parent('li').removeClass(activeClass) 
+	$('#a-' + p).parent('li').addClass(activeClass)
 	try {
 		$('.dyn').load(a.v + p + '.html')
 	} catch (e) {

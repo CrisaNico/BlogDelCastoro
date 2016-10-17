@@ -12,7 +12,7 @@
   <li class="h w3-padding-16"  id="commentTemplate">
     <h4 class="w3-xlarge name"></h4>
 	<p class="w3-sand  w3-leftbar ">
-		<i>rispondi a </i> <a class="email" target="_blank"></a>
+		<i>rispondi a </i> <a class="email"></a>
 	</p>
     <span class="body"></span>
   </li>
@@ -39,7 +39,7 @@
 		var sel='#commentTemplate' //definisco il selettore del template che conterrà il commento
 		$(sel+' .name').text(d.name) //compilo i campi di mio interesse		 
 		$(sel+' .body').text(d.body)
-		$(sel+' .email').text(d.email).attr('href','mailto:'+d.email)
+		$(sel+' .email').text(d.email).attr('href','mailto:'+d.email).attr('target','_blank')
 		$(sel).clone().attr('id','comment-'+d.id).appendTo('#comments').removeClass('h') //clono il tag "commentTemplate", al clone cambio l'attributo id, lo inserisco nella lista con id "comments" e rimuovo la classe "h", che lo nascondeva, in modo che venga visualizzato.   
 
 	}
